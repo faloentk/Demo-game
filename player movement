@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class playercontroller : MonoBehaviour
+{
+	Animator Animator;
+	Ridgitbody2d rb2d;
+	SpriteRender spriteRender;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    	animator = GetComponent<Animator>();
+    	rb2d = GetComponent<Ridgitbody2d>();
+    	SpriteRender=GetComponent<spriteRender>();
+
+        
+    }
+
+
+Fixedupadate void ()
+
+    {
+    	if(input.Getkey("d") ||input.Getkey("right"))
+    	{
+    		rb2d.velocity = new vector2(2,0);
+    	}
+    	else if(input.Getkey("a") || input.Getkey("left"))
+    	{	
+    		rb2d.velocity = new vector2(-2,0);
+    	}	
+    }
+
+}
